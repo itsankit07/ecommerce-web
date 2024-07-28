@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProductsDetails = () => {
   return (
     <div className="flex flex-row justify-evenly mt-[181px] mb-[140px]">
