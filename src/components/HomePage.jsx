@@ -2,6 +2,7 @@ import { useState } from "react";
 import imagesList from "../utils/SliderImages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import ProductSlider from "./ProductSlider";
 
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,6 +19,7 @@ const HomePage = () => {
   };
 
   return (
+    <>
     <div className="flex flex-row justify-evenly mb-[140px]">
       <aside className="mt-10">
         <ul className="flex flex-col gap-4">
@@ -68,6 +70,8 @@ const HomePage = () => {
         </div>
       </div>
     </div>
+    <ProductSlider/>
+    </>
   );
 };
 
