@@ -31,21 +31,34 @@ const ProductsDetails = () => {
           sensitive.
         </p>
         <div className="flex mt-6 flex-col justify-evenly border-black border-2">
-          <div className="flex flex-row justify-evenly items-center w-[150px] h-[20px]">
+          <div className="flex flex-row justify-evenly mt-6 items-center w-[150px] h-[20px]">
             <p>Colours:</p> <p>⭕</p> <p>✅</p>
           </div>
           <div className="w-[296px] h-[32px] mt-6 border-black border-2 flex gap-6 items-center">
             <p>Size:</p>
             <div className="flex flex-row justify-evenly gap-4">
-              <div className="w-[32px] h-[32px] flex items-center border-black border-2">
-                XS
-              </div>
+              <div className="w-[32px] h-[32px] border-black border-2">XS</div>
               <div className="w-[32px] h-[32px] border-black border-2">S</div>
               <div className="w-[32px] h-[32px] border-black border-2">M</div>
               <div className="w-[32px] h-[32px] border-black border-2">L</div>
               <div className="w-[32px] h-[32px] border-black border-2">XL</div>
             </div>
           </div>
+          <div className="flex mt-6 flex-row gap-4">
+            <div className="w-[165px] h-[44px] border-2 flex flex-row justify-between border-black">
+              <div className="border-r-2 flex justify-center items-center border-black w-[41px]">
+                +
+              </div>
+              <div className="border-l-2 flex justify-center items-center border-black w-[41px]">
+                -
+              </div>
+            </div>
+            <div className="w-[165px] h-[44px] border-2 border-black flex justify-center items-center">
+              Buy Now
+            </div>
+            <div className="w-[40px] h-[40px] border-2 border-black"></div>
+          </div>
+          <div className="w-[399px] h-[180px] mt-10 border-2 border-black "></div>
         </div>
       </div>
     </div>
