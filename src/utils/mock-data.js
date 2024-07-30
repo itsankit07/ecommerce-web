@@ -113,29 +113,49 @@
         "reviews": 85,
         "ratings": 4.5  
       },
-    //   {
-    //     "id": 11,
-    //     "discount": 20,
-    //     "name": "Smartwatch Model A",
-    //     "image": "https://example.com/smartwatchA.jpg",
-    //     "description": "A stylish smartwatch with fitness tracking.",
-    //     "discounted_price": 160,
-    //     "original_price": 200,
-    //     "category": "smartwatch",
-    //     "reviews": 140,
-    //     "ratings": 4.2
-    //   },
-    //   {
-    //     "id": 12,
-    //     "discount": 15,
-    //     "name": "Smartwatch Model B",
-    //     "image": "https://example.com/smartwatchB.jpg",
-    //     "description": "A budget-friendly smartwatch with essential features.",
-    //     "discounted_price": 85,
-    //     "original_price": 100,
-    //     "category": "smartwatch",
-    //     "reviews": 110,
-    //     "ratings": 3.9
-    //   }
+      {
+        "id": 11,
+        "discount": 20,
+        "name": "Smartwatch Model A",
+        "image": "https://example.com/smartwatchA.jpg",
+        "description": "A stylish smartwatch with fitness tracking.",
+        "discounted_price": 160,
+        "original_price": 200,
+        "category": "smartwatch",
+        "reviews": 140,
+        "ratings": 4.2
+      },
+      {
+        "id": 12,
+        "discount": 15,
+        "name": "Smartwatch Model B",
+        "image": "https://example.com/smartwatchB.jpg",
+        "description": "A budget-friendly smartwatch with essential features.",
+        "discounted_price": 85,
+        "original_price": 100,
+        "category": "smartwatch",
+        "reviews": 110,
+        "ratings": 3.9
+      },
+      {
+        "id": 13,
+        "category": "Camera"
+      },
+      {
+        "id": 14,
+        "category": "Headphone"
+      },
+      {
+        "id": 15,
+        "category": "Gaming"
+      },
+      {
+        "id": 15,
+        "category": "xyz"
+      },
+      {
+        "id": 16,
+        "category": "abc"
+      }
     ]
   

@@ -1,3 +1,5 @@
+import React from "react";
+
 const ProductsDetails = () => {
   return (
     <div className="flex flex-row justify-evenly mt-[181px] mb-[140px]">
@@ -56,7 +58,10 @@ const ProductsDetails = () => {
             </div>
             <div className="w-[40px] h-[40px] border-2 border-black"></div>
           </div>
-          <div className="w-[399px] h-[180px] mt-10 border-2 border-black "></div>
+          <div className="w-[399px] h-[180px] mt-10 border-2 border-black ">
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
