@@ -83,7 +83,7 @@ const About = () => {
 
       {/* THIRD PART */}
 
-      <div className="max-w-[1170px] mt-[140px] mb-[196px] flex flex-row justify-between mx-[135px] border-2 border-black">
+      <div className="max-w-7xl mt-[140px] mb-[196px] flex flex-row justify-between mx-[135px] border-2 border-black">
         <Carousel breakPoints={breakPoints}>
           {AboutList.map((data) => {
             return (
