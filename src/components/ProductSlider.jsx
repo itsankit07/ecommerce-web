@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuArrowLeft } from "react-icons/lu";
 import { LuArrowRight } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const ProductSlider = ({ product }) => {
   // const [Products, setProducts] = useState([]);
@@ -96,27 +97,35 @@ const ProductSlider = ({ product }) => {
           <div className="flex gap-5 ">
             {product.map((data) => {
               return (
-                <div
-                  className="flex flex-col gap-0 min-w-[270px] h-[350px]"
-                  key={data.id}
-                >
-                  <div className="relative">
-                    <div className="w-[55px] h-[26px] border rounded bg-red-500 flex justify-center absolute">
-                      -{data.discount}%
+                <Link to={"/productDetails/" + data.id}>
+                  <div
+                    className="flex flex-col gap-0 min-w-[270px] h-[350px]"
+                    key={data.id}
+                  >
+                    <div className="relative">
+                      <div className="w-[55px] h-[26px] border rounded bg-red-500 flex justify-center absolute">
+                        -{data.discount}%
+                      </div>
+                      <CiHeart className="absolute bg-white mt-3 px-1 py-1 rounded-full text-3xl right-0 mr-2" />
+                      <MdOutlineRemoveRedEye className="absolute bg-white mt-6 px-1 py-1 rounded-full text-3xl top-6 right-0 mr-2" />
+                      <div className="h-[250px] w-[270px] flex justify-center bg-[#F5F5F5]">
+                        <img
+                          className="px-10 py-9 mix-blend-multiply"
+                          src={data.image}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <CiHeart className="absolute bg-white mt-3 px-1 py-1 rounded-full text-3xl right-0 mr-2" />
-                    <MdOutlineRemoveRedEye className="absolute bg-white mt-6 px-1 py-1 rounded-full text-3xl top-6 right-0 mr-2" />
-                    <div className="h-[250px] w-[270px] flex justify-center bg-[#F5F5F5]">
-                      <img className="px-10 py-9" src={data.image} alt="" />
+                    <h3 className="font-poppin font-medium ">{data.title}</h3>
+                    <div className="text-red-500 font-poppin text-sm">
+                      {" "}
+                      ${data.price}
+                    </div>
+                    <div className="text-sm font-poppin">
+                      {data.rating.rate}
                     </div>
                   </div>
-                  <h3 className="font-poppin font-medium ">{data.title}</h3>
-                  <div className="text-red-500 font-poppin text-sm">
-                    {" "}
-                    ${data.price}
-                  </div>
-                  <div className="text-sm font-poppin">{data.rating.rate}</div>
-                </div>
+                </Link>
               );
             })}
           </div>

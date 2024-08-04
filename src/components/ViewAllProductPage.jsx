@@ -31,7 +31,11 @@ const ViewAllProductPage = () => {
                 <CiHeart className="absolute bg-white mt-3 px-1 py-1 rounded-full text-3xl right-0 mr-2" />
                 <MdOutlineRemoveRedEye className="absolute bg-white mt-6 px-1 py-1 rounded-full text-3xl top-6 right-0 mr-2" />
                 <div className="h-[250px] w-[270px] flex justify-center bg-[#F5F5F5]">
-                  <img className="px-10 py-9" src={data.image} alt="" />
+                  <img
+                    className="px-10 py-9 mix-blend-multiply"
+                    src={data.image}
+                    alt=""
+                  />
                 </div>
               </div>
               <h3 className="font-poppin font-medium">{data.title}</h3>

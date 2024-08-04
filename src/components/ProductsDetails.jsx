@@ -36,7 +36,7 @@ const ProductsDetails = () => {
         </div>
         <div className="border-2 border-black flex justify-center items-center w-[500px] h-[600px] bg-[#F5F5F5]">
           <img
-            className="w-[446px] h-[315px] px-32 py-6"
+            className="w-[446px] h-[315px] px-32 py-6 mix-blend-multiply"
             src={productDetail.image}
             alt=""
           />
