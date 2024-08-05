@@ -6,7 +6,18 @@ const Login = () => {
   const handleLogin = () => {
     setIsLogin(!isLogin);
   };
-
+  
+  const handlleSignIn = () =>{
+    fetch('https://fakestoreapi.com/auth/login',{
+      method:'POST',
+      body:JSON.stringify({
+          username: "mor_2314",
+          password: "83r5^_"
+      })
+  })
+      .then(res=>res.json())
+      .then(json=>console.log(json))
+  }
   return (
     <div className="w-11/12 flex flex-wrap">
       <div className="6/12">
@@ -53,7 +64,7 @@ const Login = () => {
               <div className="flex items-center justify-between">
                 <button
                   className="bg-red-500 py-3 px-4 text-white rounded-md"
-                  type="button"
+                  type="button" onClick={handlleSignIn}
                 >
                   Login
                 </button>

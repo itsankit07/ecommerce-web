@@ -2,9 +2,7 @@ import axios from "axios";
 import { CiMobile3 } from "react-icons/ci";
 import { GiJewelCrown, GiClothes, GiLoincloth } from "react-icons/gi";
 import { useState, useEffect } from "react";
-import { products } from "../utils/mock-data";
 import { Link } from "react-router-dom";
-
 const BrowseByCategory = () => {
   const [browserCategory, setBrowserCategory] = useState([]);
 

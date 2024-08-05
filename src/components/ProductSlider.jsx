@@ -1,46 +1,13 @@
-import axios from "axios";
-import { products } from "../utils/mock-data";
-import { useState, useEffect } from "react";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuArrowLeft } from "react-icons/lu";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import useTimer from "../utils/hooks/useTimer";
 
-const ProductSlider = ({ product }) => {
-  // const [Products, setProducts] = useState([]);
+const ProductSlider = ( {product} ) => {
 
-  // useEffect(() => {
-  //   axios.get("https://fakestoreapi.com/products").then((res) => {
-  //     const info = res.data;
-  //     console.log(info);
-  //     setProducts(info);
-  //   });
-  // }, []);
-  const calculateTimeLeft = () => {
-    const endDate = new Date("August 10, 2024 12:00:00").getTime();
-    const now = new Date().getTime();
-    const distance = endDate - now;
-
-    const timeLeft = {
-      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((distance % (1000 * 60)) / 1000),
-    };
-
-    return distance > 0
-      ? timeLeft
-      : { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-  }, []);
+  const timeLeft = useTimer();
 
   const handleScrollLeft = () => {
     const productClass = document.querySelector(".products-class");
@@ -97,7 +64,7 @@ const ProductSlider = ({ product }) => {
           <div className="flex gap-5 ">
             {product.map((data) => {
               return (
-                <Link to={"/productDetails/" + data.id}>
+                <Link to={"/productDetails/" + data.id} key={data.id}>
                   <div
                     className="flex flex-col gap-0 min-w-[270px] h-[350px]"
                     key={data.id}

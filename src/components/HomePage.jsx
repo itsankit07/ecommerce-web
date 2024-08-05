@@ -11,7 +11,6 @@ import BestSellingProduct from "./BestSellingProduct";
 import BestDealHomePage from "./BestDealHomePage";
 import ExploreOurProducts from "./ExploreOurProducts";
 import NewArrival from "./NewArrival";
-import { products } from "../utils/mock-data";
 
 const HomePage = () => {
   const [Products, setProducts] = useState([]);

@@ -2,6 +2,7 @@ import axios from "axios";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { useState, useEffect } from "react";
+import ShimmerUi from "./ShimmerUi";
 
 const ViewAllProductPage = () => {
   const [allProduct, setallProducts] = useState([]);
@@ -15,6 +16,10 @@ const ViewAllProductPage = () => {
       });
     }, 2000);
   }, []);
+
+  if (allProduct.length === 0) {
+    return <ShimmerUi />;
+  }
 
   return (
     <div className="max-w-6xl my-20 mx-auto h-full">
