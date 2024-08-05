@@ -1,11 +1,13 @@
+import { Route, RouterProvider, Routes } from "react-router-dom";
+import "react-toastify/ReactToastify.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Login from "./Login";
-import { Route, RouterProvider, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import ProductsDetails from "./ProductsDetails";
 import ErrorPage from "./ErrorPage";
 import ContactPage from "./ContactPage";
+import AccountPage from "./AccountPage";
 import About from "./About";
 import { lazy, Suspense } from "react";
 import SinglePage from "./browseByCategoryPages/SinglePage";
@@ -23,6 +25,7 @@ const Body = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/About" element={<About />}></Route>
+          <Route path="/AccountPage" element={<AccountPage />}></Route>
           <Route
             path="/productDetails/:prodID"
             element={<ProductsDetails />}

@@ -25,7 +25,7 @@ const BestSellingProduct = ({ bestSelling }) => {
             return data.rating.rate > 4 ? (
               <Link to={"/productDetails/" + data.id}>
                 <div
-                  className="flex flex-col gap-0 min-w-[270px] h-[350px]"
+                  className="flex flex-col gap-0 min-w-[270px] h-[350px] drop-shadow-2xl"
                   key={data.id}
                 >
                   <div className="relative">

@@ -21,7 +21,10 @@ const ViewAllProductPage = () => {
       <div className="flex flex-wrap gap-5">
         {allProduct.map((data) => {
           return (
-            <div className="w-[270px] h-[350px] flex flex-col" key={data.id}>
+            <div
+              className="w-[270px] h-[350px] flex flex-col drop-shadow-2xl"
+              key={data.id}
+            >
               <div className="relative">
                 {data.rating.rate > 4 && (
                   <div className=" bg-green-400 absolute text-white font-poppin text-sm left-2 top-2 px-3 py-1 rounded">
