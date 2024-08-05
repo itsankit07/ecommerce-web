@@ -8,6 +8,7 @@ import ErrorPage from "./ErrorPage";
 import ContactPage from "./ContactPage";
 import About from "./About";
 import { lazy, Suspense } from "react";
+import SinglePage from "./browseByCategoryPages/SinglePage";
 
 const ViewAllProductPage = lazy(() => {
   return import("./ViewAllProductPage");
@@ -26,6 +27,7 @@ const Body = () => {
             path="/productDetails/:prodID"
             element={<ProductsDetails />}
           ></Route>
+          <Route path="/singlePage/:categName" element={<SinglePage />}></Route>
           <Route path="/contact" element={<ContactPage />}></Route>
           <Route
             path="*"

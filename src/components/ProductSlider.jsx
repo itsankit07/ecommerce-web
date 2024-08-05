@@ -18,7 +18,7 @@ const ProductSlider = ({ product }) => {
   //   });
   // }, []);
   const calculateTimeLeft = () => {
-    const endDate = new Date("August 2, 2024 12:00:00").getTime();
+    const endDate = new Date("August 10, 2024 12:00:00").getTime();
     const now = new Date().getTime();
     const distance = endDate - now;
 
