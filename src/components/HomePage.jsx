@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import imagesList from "../utils/SliderImages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
@@ -10,8 +11,19 @@ import BestSellingProduct from "./BestSellingProduct";
 import BestDealHomePage from "./BestDealHomePage";
 import ExploreOurProducts from "./ExploreOurProducts";
 import NewArrival from "./NewArrival";
+import { products } from "../utils/mock-data";
 
 const HomePage = () => {
+  const [Products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products").then((res) => {
+      const info = res.data;
+      console.log(info);
+      setProducts(info);
+    });
+  }, []);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -27,8 +39,8 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="flex flex-row mx-[135px] justify-evenly mb-[140px]">
-        <aside className="mt-10">
+      <div className="flex max-w-6xl  justify-between mx-auto mb-[140px]">
+        <aside className="pt-10 w-2/12 border-r-2 border-black border-opacity-30 ">
           <ul className="flex flex-col gap-4">
             <li>Woman’s Fashion &gt;</li>
             <li>Men’s Fashion</li>
@@ -41,21 +53,21 @@ const HomePage = () => {
             <li>Health & Beauty</li>
           </ul>
         </aside>
-        <div className="w-[892px] h-[344px] bg-black mt-10 border-black border-2 relative group">
-          <div className="absolute left-16 top-[58px] flex flex-row justify-between items-center gap-5">
-            <img className="w-10 h-[49px]" src="/Applelogo.png" alt="" />
-            <p className="text-white py-[14.5px]">iPhone 14 Series</p>
+        <div className="relative w-9/12 h-[21.5em] bg-black mt-10 group ">
+          <div className="absolute w-5/12 left-16 top-[3.625em] flex flex-row items-center gap-5">
+            <img className="h-[3.0625em]" src="/Applelogo.png" alt="" />
+            <p className="text-white py-[0.9063em]">iPhone 14 Series</p>
           </div>
-          <div className="text-white tracking-wide font-inter w-[294px] text-5xl font-bold absolute left-16 top-[127px] flex flex-col gap-2">
+          <div className="text-white w-5/12 tracking-wide font-inter text-5xl font-bold absolute left-16 top-[127px] flex flex-col gap-2">
             <h1>Up to 10%</h1>
             <h1>off Voucher</h1>
           </div>
-          <div className="absolute left-16 top-[269px]">
+          <div className="absolute w-5/12 left-16 top-[269px]">
             <p className="text-white font-poppin text-lg">Shop Now</p>
           </div>
 
           <img
-            className="w-[496px] h-[342px] absolute left-[393px] duration-300"
+            className="absolute w-6/12 h-[20.375em]  left-[23.75em] duration-300"
             src={imagesList[currentIndex].url}
             alt=""
           />
@@ -77,14 +89,29 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <ProductSlider />
+
+      {/* Today's Section */}
+
+      <ProductSlider product={Products} />
+
+      {/* Browse By Category Section */}
+
       <BrowseByCategory />
-      <BestSellingProduct />
+
+      {/* Best Selling Section */}
+
+      <BestSellingProduct bestSelling={Products} />
+
+      {/* Best Deal Section */}
+
       <BestDealHomePage />
-      <ExploreOurProducts />
+
+      {/* Explore Section */}
+      <ExploreOurProducts explore={Products} />
+
       <NewArrival />
 
-      <div className="flex justify-between py-10 ml-[249px] mr-[248px] mb-[140px] max-w-4xl">
+      <div className="flex justify-between py-10 mx-auto mb-[140px] max-w-4xl">
         <div className="text-center flex flex-col items-center ">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
             <FaShippingFast className="text-4xl  text-white  " />

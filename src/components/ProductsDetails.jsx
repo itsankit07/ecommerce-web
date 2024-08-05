@@ -1,6 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const ProductsDetails = () => {
+  const [productDetail, setProductDetail] = useState([]);
+
+  const { prodID } = useParams();
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products/" + prodID).then((res) => {
+      const info = res.data;
+      //console.log(info);
+      setProductDetail(info);
+    });
+    //  fetchMenu();
+  }, []);
+
+  // const fetchMenu = () => {
+  //      axios.get("https://fakestoreapi.com/products").then((res) => {
+  //        const info = res.data;
+  //        console.log(info);
+  //        setallProducts(info);
+  //      });
+  // };
+  //console.log(productDetail);
+
   return (
     <div className="flex flex-row justify-evenly mt-[181px] mb-[140px]">
       <div className="flex flex-row justify-evenly gap-[30px]">
@@ -10,26 +34,24 @@ const ProductsDetails = () => {
           <div className="w-[168px] h-[138px] border-2 border-black"></div>
           <div className="w-[168px] h-[138px] border-2 border-black"></div>
         </div>
-        <div className="border-2 border-black w-[500px] h-[600px] bg-slate-200">
+        <div className="border-2 border-black flex justify-center items-center w-[500px] h-[600px] bg-[#F5F5F5]">
           <img
-            className="w-[446px] h-[315px] mt-[154px] ml-[27px]"
-            src="/ProductImageMain.jpg"
+            className="w-[446px] h-[315px] px-32 py-6 mix-blend-multiply"
+            src={productDetail.image}
             alt=""
           />
         </div>
       </div>
       <div className="border-2 border-black w-[400px] h-[600px]">
-        <h4 className="font-bold tracking-wider">Havic HV G-92 Gamepad</h4>
+        <h4 className="font-bold font-inter tracking-wider">
+          {productDetail.title}
+        </h4>
         <div className="w-[290px] h-[21px] border-black border-2 mt-4 flex flex-row justify-evenly items-center">
           <span>⭐⭐⭐⭐</span> <span>150 reviews</span>{" "}
           <span className="text-green-400">In-stock</span>
         </div>
-        <p className="mt-4 font-normal text-xl">$192</p>
-        <p className="mt-4">
-          PlayStation 5 Controller Skin High quality vinyl with air channel
-          adhesive for easy bubble free install & mess free removal Pressure
-          sensitive.
-        </p>
+        <p className="mt-4 font-inter text-xl">${productDetail.price}</p>
+        <p className="mt-4 font-poppin text-sm">{productDetail.description}</p>
         <div className="flex mt-6 flex-col justify-evenly border-black border-2">
           <div className="flex flex-row justify-evenly mt-6 items-center w-[150px] h-[20px]">
             <p>Colours:</p> <p>⭕</p> <p>✅</p>

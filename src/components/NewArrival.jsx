@@ -1,6 +1,6 @@
 const NewArrival = () => {
   return (
-    <div className="w-[73.125rem] mx-[8.4375rem] mt-[8.75rem] mb-[8.75rem] h-[48rem]">
+    <div className="max-w-6xl mx-auto mt-[8.75rem] mb-[8.75rem] h-[48rem]">
       <div className="flex flex-row justify-start gap-4 items-center">
         <div className="w-[1.25em] h-[2.5em] bg-red-500 rounded-md"></div>
         <p className="font-poppin font-medium text-red-500">Featured</p>
@@ -8,9 +8,9 @@ const NewArrival = () => {
       <div>
         <h1 className="font-inter font-semibold text-4xl pt-5">New Arrival</h1>
       </div>
-      <div className=" mt-[60px] flex justify-between">
-        {/* PLAYSTATION DIV */}
 
+      {/* PLAYSTATION DIV */}
+      <div className=" mt-[60px] flex gap-7">
         <div className="relative w-[35.625em] h-[37.8em] bg-black ">
           <img
             className="px-[1.875em] pt-[5.5625em]"
