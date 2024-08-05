@@ -22,7 +22,7 @@ const ExploreOurProducts = ({ explore }) => {
             return (
               <Link to={"/productDetails/" + data.id}>
                 <div
-                  className="w-[270px] h-[350px] flex flex-col"
+                  className="w-[270px] h-[350px] flex flex-col drop-shadow-2xl"
                   key={data.id}
                 >
                   <div className="relative">
@@ -54,7 +54,7 @@ const ExploreOurProducts = ({ explore }) => {
         </div>
       </div>
 
-      <div className="bg-red-500 w-[234px] my-[60px] h-[56px] border rounded flex justify-center items-center py-4 m-auto text-white cursor-pointer">
+      <div className="bg-red-500 w-[234px] my-[60px] h-[56px] border rounded flex justify-center items-center shadow-xl py-4 m-auto text-white cursor-pointer">
         <Link to="/viewAllProduct">View All Products</Link>
       </div>
     </div>

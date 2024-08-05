@@ -24,15 +24,15 @@ const ProductSlider = ( {product} ) => {
       <div className="max-w-6xl h-[493px] mx-auto flex flex-col gap-5">
         <div className="flex gap-4">
           <div className="w-[20px] h-[40px]  rounded bg-red-500"></div>
-          <h4 className="text-red-500 flex items-center font-poppin font-semibold">
+          <h4 className="text-red-500 flex items-center font-poppin font-semibold ">
             Todays
           </h4>
         </div>
         <div className="flex flex-row justify-start">
-          <h1 className="text-4xl font-inter font-semibold flex items-center">
+          <h1 className="text-4xl font-inter font-semibold flex items-center shadow-lg">
             Flash Sales
           </h1>
-          <div className="ml-28 flex flex-col">
+          <div className="ml-28 flex flex-col shadow-lg">
             <ul className="flex font-poppin font-medium gap-8">
               <li>Days</li>
               <li>Hours</li>
@@ -66,7 +66,7 @@ const ProductSlider = ( {product} ) => {
               return (
                 <Link to={"/productDetails/" + data.id} key={data.id}>
                   <div
-                    className="flex flex-col gap-0 min-w-[270px] h-[350px]"
+                    className="flex flex-col gap-0 min-w-[270px] h-[350px] drop-shadow-2xl"
                     key={data.id}
                   >
                     <div className="relative">
@@ -99,7 +99,7 @@ const ProductSlider = ( {product} ) => {
         </div>
       </div>
 
-      <div className="bg-red-500 w-[234px] my-[60px] h-[56px] border rounded flex justify-center items-center py-4 m-auto text-white cursor-pointer">
+      <div className="bg-red-500 w-[234px] my-[60px] h-[56px] border rounded flex justify-center items-center py-4 m-auto text-white cursor-pointer shadow-2xl">
         View All Products
       </div>
     </>
