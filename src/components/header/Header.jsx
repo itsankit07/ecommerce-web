@@ -36,16 +36,16 @@ const Header = () => {
 
         <div>
           <input
-            className="bg-slate-200 h-[3.125em] flex w-64 font-poppin text-sm pl-4 absolute right-80 top-16"
+            className="bg-slate-200 h-[3.125em] flex w-64 font-poppin text-sm pl-4  right-80 top-16 absolute"
             type="text"
             placeholder="What are you looking for?"
           />
-          <IoSearch className="relative left-40 text-2xl" />
+          <IoSearch className="relative left-32 text-2xl" />
         </div>
         <div className="flex flex-row gap-4">
           <CiHeart className="text-2xl" />
           <AiOutlineShoppingCart className="text-2xl" />
-          <CgProfile className="text-2xl" />
+          {/* <CgProfile className="text-2xl" /> */}
         </div>
       </div>
     </div>

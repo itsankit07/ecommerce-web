@@ -1,8 +1,8 @@
-import { products } from "../utils/mock-data";
+import { products } from "../../utils/mock-data";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
-import StarRating from "./StarRating";
+import StarRating from "../StarRating";
 
 const ExploreOurProducts = ({ explore }) => {
   return (
