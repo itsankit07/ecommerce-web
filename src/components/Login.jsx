@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -8,16 +10,30 @@ const Login = () => {
   };
   
   const handlleSignIn = () =>{
-    fetch('https://fakestoreapi.com/auth/login',{
-      method:'POST',
-      body:JSON.stringify({
-          username: "mor_2314",
-          password: "83r5^_"
-      })
-  })
-      .then(res=>res.json())
-      .then(json=>console.log(json))
+    let data = JSON.stringify({
+      "username": "ankit",
+      "password": "83r5^_"
+    });
+    
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://fakestoreapi.com/auth/login',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    axios.request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
+
   return (
     <div className="w-11/12 flex flex-wrap">
       <div className="6/12">

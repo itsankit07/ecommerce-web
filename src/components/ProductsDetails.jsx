@@ -1,7 +1,7 @@
 import axios from "axios";
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiReturnArrow } from "react-icons/gi";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const ProductsDetails = () => {
