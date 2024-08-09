@@ -3,8 +3,8 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuArrowLeft } from "react-icons/lu";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import useTimer from "../utils/hooks/useTimer";
-import StarRating from "./StarRating";
+import useTimer from "../../utils/hooks/useTimer";
+import StarRating from "../StarRating";
 
 const ProductSlider = ({ product }) => {
   const timeLeft = useTimer();
