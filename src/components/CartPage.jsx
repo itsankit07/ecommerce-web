@@ -1,8 +1,28 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
   return (
     <div className="max-w-6xl h-[840px] mx-auto  mt-[181px] mb-[140px] flex flex-col justify-between">
+            {/* BreadCrumb */}
+            <div className="flex mb-5" aria-label="BreadCrumb">
+            <ol className="inline-flex items-center">
+                    <li className="inline-flex items-center">
+                        <Link to = "/" className="inline-flex items-center text-sm font-medium text-customblack-1 hover:text-black">
+                         Home/
+                        </Link>
+                    </li>
+            <li aria-current="page">
+            <div className="flex items-center">
+               
+               <Link
+                to={`/Cart`}
+                className="text-sm font-medium text-customblack-1 hover:text-black ">
+                Cart
+               </Link>
+            </div>
+            </li>    
+            </ol>
+            </div>
       <div className="h-[436px] flex flex-col justify-between">
         <div className="flex flex-row justify-evenly  py-6  shadow-xl">
           <p className="font-poppin">Product</p>
