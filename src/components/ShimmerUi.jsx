@@ -1,23 +1,22 @@
 const ShimmerUi = () => {
-    return (
-      <div className="pt-[88px]">
-        <div className="container w-9/12 flex flex-wrap items-center justify-center gap-10 mx-auto mt-10">
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-          <div className="w-[330px] h-[250px] rounded-xl bg-gray-400 animate"></div>
-        </div>
+  return (
+    <div className="pt-[80px] ">
+      <div className="container w-9/12  flex flex-wrap items-center justify-center gap-5 mx-auto ">
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
+        <div className="w-[270px] h-[350px] rounded-xl bg-gray-400 animate"></div>
       </div>
-    );
-  };
-  
-  export default ShimmerUi;
-  
+    </div>
+  );
+};
+
+export default ShimmerUi;

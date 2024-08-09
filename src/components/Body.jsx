@@ -1,22 +1,28 @@
-import { Route, RouterProvider, Routes } from "react-router-dom";
+import { Route, RouterProvider, Routes, useLocation } from "react-router-dom";
 import "react-toastify/ReactToastify.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Login from "./Login";
-import HomePage from "./HomePage";
+import HomePage from "./Home/HomePage";
 import ProductsDetails from "./ProductsDetails";
 import ErrorPage from "./ErrorPage";
 import ContactPage from "./ContactPage";
 import AccountPage from "./AccountPage";
 import About from "./About";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import SinglePage from "./browseByCategoryPages/SinglePage";
+import CartPage from "./CartPage";
 
 const ViewAllProductPage = lazy(() => {
   return import("./ViewAllProductPage");
 });
 
 const Body = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [location.pathname]);
+
   return (
     <div>
       <>
@@ -25,6 +31,7 @@ const Body = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/About" element={<About />}></Route>
+          <Route path="/cart" element={<CartPage />}></Route>
           <Route path="/AccountPage" element={<AccountPage />}></Route>
           <Route
             path="/productDetails/:prodID"

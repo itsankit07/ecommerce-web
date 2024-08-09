@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import imagesList from "../utils/SliderImages";
+import imagesList from "../../utils/SliderImages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { FaShippingFast, FaHeadset } from "react-icons/fa";
 import { GoShieldCheck } from "react-icons/go";
-import ProductSlider from "./ProductSlider";
-import BrowseByCategory from "./BrowseByCategory";
-import BestSellingProduct from "./BestSellingProduct";
-import BestDealHomePage from "./BestDealHomePage";
-import ExploreOurProducts from "./ExploreOurProducts";
-import NewArrival from "./NewArrival";
+import ProductSlider from "../ProductSlider";
+import BrowseByCategory from "../BrowseByCategory";
+import BestSellingProduct from "../BestSellingProduct";
+import BestDealHomePage from "../BestDealHomePage";
+import ExploreOurProducts from "../ExploreOurProducts";
+import NewArrival from "../NewArrival";
 
 const HomePage = () => {
   const [Products, setProducts] = useState([]);
@@ -40,7 +40,7 @@ const HomePage = () => {
     <>
       <div className="flex max-w-6xl  justify-between mx-auto mb-[140px]">
         <aside className="pt-10 w-2/12 border-r-2 border-black border-opacity-30 ">
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 font-poppin">
             <li>Woman’s Fashion &gt;</li>
             <li>Men’s Fashion</li>
             <li>Electronics</li>

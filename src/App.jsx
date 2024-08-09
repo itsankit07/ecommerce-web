@@ -3,6 +3,7 @@ import "./App.css";
 import Body from "./components/Body";
 
 function App() {
+  window.scroll(0, 0);
   return (
     <Router>
       <Body />

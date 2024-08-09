@@ -4,9 +4,9 @@ import { LuArrowLeft } from "react-icons/lu";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import useTimer from "../utils/hooks/useTimer";
+import StarRating from "./StarRating";
 
-const ProductSlider = ( {product} ) => {
-
+const ProductSlider = ({ product }) => {
   const timeLeft = useTimer();
 
   const handleScrollLeft = () => {
@@ -29,10 +29,10 @@ const ProductSlider = ( {product} ) => {
           </h4>
         </div>
         <div className="flex flex-row justify-start">
-          <h1 className="text-4xl font-inter font-semibold flex items-center shadow-lg">
+          <h1 className="text-4xl font-inter font-semibold flex items-center ">
             Flash Sales
           </h1>
-          <div className="ml-28 flex flex-col shadow-lg">
+          <div className="ml-28 flex flex-col ">
             <ul className="flex font-poppin font-medium gap-8">
               <li>Days</li>
               <li>Hours</li>
@@ -40,9 +40,18 @@ const ProductSlider = ( {product} ) => {
               <li>Seconds</li>
             </ul>
             <div className="flex font-inter font-bold text-4xl gap-5">
-              <h1>{String(timeLeft.days).padStart(2, "0")} :</h1>
-              <h1>{String(timeLeft.hours).padStart(2, "0")} :</h1>
-              <h1>{String(timeLeft.minutes).padStart(2, "0")} :</h1>
+              <h1>
+                {String(timeLeft.days).padStart(2, "0")}{" "}
+                <span className="text-red-500">:</span>
+              </h1>
+              <h1>
+                {String(timeLeft.hours).padStart(2, "0")}{" "}
+                <span className="text-red-500">:</span>
+              </h1>
+              <h1>
+                {String(timeLeft.minutes).padStart(2, "0")}{" "}
+                <span className="text-red-500">:</span>
+              </h1>
               <h1>{String(timeLeft.seconds).padStart(2, "0")}</h1>
             </div>
           </div>
@@ -66,15 +75,15 @@ const ProductSlider = ( {product} ) => {
               return (
                 <Link to={"/productDetails/" + data.id} key={data.id}>
                   <div
-                    className="flex flex-col gap-0 min-w-[270px] h-[350px] drop-shadow-2xl"
+                    className="flex flex-col gap-0 min-w-[270px] h-[350px] group"
                     key={data.id}
                   >
                     <div className="relative">
                       <div className="w-[55px] h-[26px] border rounded bg-red-500 flex justify-center absolute">
                         -{data.discount}%
                       </div>
-                      <CiHeart className="absolute bg-white mt-3 px-1 py-1 rounded-full text-3xl right-0 mr-2" />
-                      <MdOutlineRemoveRedEye className="absolute bg-white mt-6 px-1 py-1 rounded-full text-3xl top-6 right-0 mr-2" />
+                      <CiHeart className="absolute bg-white mt-3 px-1 py-1 rounded-full text-3xl right-0 mr-2 shadow-xl" />
+                      <MdOutlineRemoveRedEye className="absolute bg-white mt-6 px-1 py-1 rounded-full text-3xl top-6 right-0 mr-2 shadow-xl" />
                       <div className="h-[250px] w-[270px] flex justify-center bg-[#F5F5F5]">
                         <img
                           className="px-10 py-9 mix-blend-multiply"
@@ -82,14 +91,18 @@ const ProductSlider = ( {product} ) => {
                           alt=""
                         />
                       </div>
+                      <button className="absolute bg-black text-white bottom-0 w-full py-2 font-poppin text-sm opacity-0 group-hover:opacity-100 duration-200">
+                        Add to cart
+                      </button>
                     </div>
                     <h3 className="font-poppin font-medium ">{data.title}</h3>
                     <div className="text-red-500 font-poppin text-sm">
                       {" "}
                       ${data.price}
                     </div>
-                    <div className="text-sm font-poppin">
-                      {data.rating.rate}
+                    <div className="text-start">
+                      <StarRating rating={data.rating.rate} />
+                      {/* {data.rating.rate} */}
                     </div>
                   </div>
                 </Link>

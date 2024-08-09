@@ -3,6 +3,7 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ShimmerUi from "../ShimmerUi";
 
 const SinglePage = () => {
   const [categoryDetails, setCategoryDetails] = useState([]);
@@ -19,6 +20,10 @@ const SinglePage = () => {
       });
     //  fetchMenu();
   }, []);
+
+  if (categoryDetails.length === 0) {
+    return <ShimmerUi />;
+  }
 
   return (
     <div className="max-w-6xl my-20 mx-auto h-full">

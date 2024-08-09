@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const useTimer = () => {
     const calculateTimeLeft = () => {
-        const endDate = new Date("August 10, 2024 12:00:00").getTime();
+        const endDate = new Date("August 15, 2024 12:00:00").getTime();
         const now = new Date().getTime();
         const distance = endDate - now;
     
@@ -12,6 +12,8 @@ const useTimer = () => {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         };
+        console.log(timeLeft);
+        
     
         return distance > 0
           ? timeLeft
