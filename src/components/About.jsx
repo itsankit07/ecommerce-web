@@ -12,6 +12,7 @@ import { FaSackDollar } from "react-icons/fa6";
 import { GoShieldCheck } from "react-icons/go";
 import Carousel from "react-elastic-carousel";
 import { AboutList } from "../utils/AboutSlider";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const breakPoints = [
@@ -24,21 +25,46 @@ const About = () => {
     <>
       {/* TOP PART */}
 
+      {/* BreadCrumbs */}
+
+      <div className="flex ml-[8.4375rem] pt-10" aria-label="BreadCrumb">
+        <ol className="inline-flex items-center">
+          <li className="inline-flex items-center">
+            <Link
+              to="/"
+              className="inline-flex items-center text-sm font-medium text-customblack-1 hover:text-black"
+            >
+              Home/
+            </Link>
+          </li>
+          <li aria-current="page">
+            <div className="flex items-center">
+              <Link
+                to={`/About`}
+                className="text-sm font-medium text-customblack-1 hover:text-black "
+              >
+                About
+              </Link>
+            </div>
+          </li>
+        </ol>
+      </div>
+
       <div className="flex flex-row justify-between ml-[8.4375rem] mt-[8.9375rem] ">
         <div className="w-[32.8125em] h-[21em] mt-[8.5625em] ">
           <div className="flex flex-col justify-between">
             <div>
-              <h1 className="text-5xl font-semibold">Our Story</h1>
+              <h1 className="text-5xl font-semibold font-inter">Our Story</h1>
             </div>
             <div className="flex flex-col mt-[2.5em] gap-[1.5em]">
-              <p>
+              <p className="font-poppin">
                 Launced in 2015, Exclusive is South Asia’s premier online
                 shopping makterplace with an active presense in Bangladesh.
                 Supported by wide range of tailored marketing, data and service
                 solutions, Exclusive has 10,500 sallers and 300 brands and
                 serves 3 millioons customers across the region.
               </p>
-              <p>
+              <p className="font-poppin">
                 Exclusive has more than 1 Million products to offer, growing at
                 a very fast. Exclusive offers a diverse assotment in categories
                 ranging from consumer.
@@ -56,7 +82,7 @@ const About = () => {
       <div className="flex justify-evenly items-center  mb-8 mt-[140px] px-36">
         <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
-            <FaStore className="text-3xl mb-1 text-white group-hover:text-black" />
+            <FaStore className="text-3xl text-white group-hover:text-black" />
           </div>
           <p className="font-inter text-2xl font-bold group-hover:text-white">
             10.5k
@@ -67,7 +93,7 @@ const About = () => {
         </div>
         <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500 ">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
-            <FaDollarSign className="text-3xl mb-1 text-white group-hover:text-black" />
+            <FaDollarSign className="text-3xl  text-white group-hover:text-black" />
           </div>
           <p className="font-inter text-2xl font-bold group-hover:text-white">
             33k
@@ -78,7 +104,7 @@ const About = () => {
         </div>
         <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
-            <FaShoppingBag className="text-3xl mb-1 text-white group-hover:text-black" />
+            <FaShoppingBag className="text-3xl  text-white group-hover:text-black" />
           </div>
           <p className="font-inter text-2xl font-bold group-hover:text-white">
             45.5k
@@ -89,7 +115,7 @@ const About = () => {
         </div>
         <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
-            <FaSackDollar className="text-3xl mb-1 text-white group-hover:text-black" />
+            <FaSackDollar className="text-3xl  text-white group-hover:text-black" />
           </div>
           <p className="font-inter text-2xl font-bold group-hover:text-white">
             25k
@@ -139,22 +165,30 @@ const About = () => {
             <FaShippingFast className="text-4xl  text-white  " />
           </div>
 
-          <h3 className="mb-2 text-lg font-bold">FREE AND FAST DELIVERY</h3>
-          <p className="text-sm">Free delivery for all orders over $140</p>
+          <h3 className="mb-2 text-lg font-bold font-poppin">
+            FREE AND FAST DELIVERY
+          </h3>
+          <p className="text-sm font-poppin">
+            Free delivery for all orders over $140
+          </p>
         </div>
         <div className="text-center flex flex-col items-center">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
             <FaHeadset className="text-4xl  text-white" />
           </div>
-          <h3 className="mb-2 text-lg font-bold">24/7 CUSTOMER SERVICE</h3>
-          <p className="text-sm">Friendly 24/7 customer support</p>
+          <h3 className="mb-2 text-lg font-bold font-poppin ">
+            24/7 CUSTOMER SERVICE
+          </h3>
+          <p className="text-sm font-poppin">Friendly 24/7 customer support</p>
         </div>
         <div className="text-center flex flex-col items-center">
           <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
             <GoShieldCheck className="text-4xl text-white" />
           </div>
-          <h3 className="mb-2 text-lg font-bold">MONEY BACK GUARANTEE</h3>
-          <p className="text-sm">We return money within 30 days</p>
+          <h3 className="mb-2 text-lg font-bold font-poppin">
+            MONEY BACK GUARANTEE
+          </h3>
+          <p className="text-sm font-poppin">We return money within 30 days</p>
         </div>
       </div>
     </>

@@ -1,7 +1,32 @@
+import { Link } from "react-router-dom";
 const ContactPage = () => {
   return (
     <>
-      <div className="flex flex-row flex-wrap justify-between mx-[8.4375rem] mt-[11.3125rem] mb-[8.75rem] ">
+      {/* BreadCrumbs */}
+
+      <div className="flex ml-[8.4375rem] mt-14" aria-label="BreadCrumb">
+        <ol className="inline-flex items-center">
+          <li className="inline-flex items-center">
+            <Link
+              to="/"
+              className="inline-flex items-center text-sm font-medium text-customblack-1 hover:text-black"
+            >
+              Home/
+            </Link>
+          </li>
+          <li aria-current="page">
+            <div className="flex items-center">
+              <Link
+                to={`/contact`}
+                className="text-sm font-medium text-customblack-1 hover:text-black "
+              >
+                Contact
+              </Link>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div className="flex flex-row flex-wrap justify-between mx-[8.4375rem] mt-20 mb-[8.75rem] ">
         <div className=" w-[21.25em] h-[28.5625em] flex flex-col shadow-2xl">
           <div className="flex flex-col mt-[2.5em] mx-[2.1875em] mb-[3.1875em] ">
             <div className="flex flex-col  gap-[1em] mb-[2em] mr-[0.5em]">

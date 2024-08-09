@@ -7,8 +7,8 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full bg-black h-[440px]">
-      <div className="flex flex-row text-white justify-evenly gap-[87px] pt-20 px-[134px] pb-[95px]">
+    <div className="w-full bg-black min-h-[440px] ">
+      <div className="flex flex-row text-white justify-evenly gap-[87px] pt-20 px-[134px] pb-[95px] flex-wrap">
         <div className="flex flex-col gap-4 ">
           <p className="tracking-wide text-lg font-bold font-inter w-[118px] h-[24px]">
             Exclusive

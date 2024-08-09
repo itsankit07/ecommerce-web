@@ -28,34 +28,37 @@ const ProductSlider = ({ product }) => {
             Todays
           </h4>
         </div>
-        <div className="flex flex-row justify-start">
-          <h1 className="text-4xl font-inter font-semibold flex items-center ">
-            Flash Sales
-          </h1>
-          <div className="ml-28 flex flex-col ">
-            <ul className="flex font-poppin font-medium gap-8">
-              <li>Days</li>
-              <li>Hours</li>
-              <li>Minutes</li>
-              <li>Seconds</li>
-            </ul>
-            <div className="flex font-inter font-bold text-4xl gap-5">
-              <h1>
-                {String(timeLeft.days).padStart(2, "0")}{" "}
-                <span className="text-red-500">:</span>
-              </h1>
-              <h1>
-                {String(timeLeft.hours).padStart(2, "0")}{" "}
-                <span className="text-red-500">:</span>
-              </h1>
-              <h1>
-                {String(timeLeft.minutes).padStart(2, "0")}{" "}
-                <span className="text-red-500">:</span>
-              </h1>
-              <h1>{String(timeLeft.seconds).padStart(2, "0")}</h1>
+        <div className="flex flex-row justify-between">
+          <div className="flex gap-4">
+            <h1 className="text-4xl font-inter font-semibold flex items-center ">
+              Flash Sales
+            </h1>
+
+            <div className="ml-28 flex flex-col ">
+              <ul className="flex font-poppin font-medium gap-8">
+                <li>Days</li>
+                <li>Hours</li>
+                <li>Minutes</li>
+                <li>Seconds</li>
+              </ul>
+              <div className="flex font-inter font-bold text-4xl gap-5">
+                <h1>
+                  {String(timeLeft.days).padStart(2, "0")}{" "}
+                  <span className="text-red-500">:</span>
+                </h1>
+                <h1>
+                  {String(timeLeft.hours).padStart(2, "0")}{" "}
+                  <span className="text-red-500">:</span>
+                </h1>
+                <h1>
+                  {String(timeLeft.minutes).padStart(2, "0")}{" "}
+                  <span className="text-red-500">:</span>
+                </h1>
+                <h1>{String(timeLeft.seconds).padStart(2, "0")}</h1>
+              </div>
             </div>
           </div>
-          <div className=" flex flex-row gap-6 ml-96 mr-4 rounded-full ">
+          <div className=" flex flex-row gap-6  mr-4 rounded-full ">
             <div>
               <button onClick={handleScrollLeft}>
                 <LuArrowLeft className="text-2xl" />
@@ -69,7 +72,7 @@ const ProductSlider = ({ product }) => {
           </div>
         </div>
 
-        <div className=" h-[350px] mt-2 overflow-x-scroll overflow-y-hidden scroll-smooth products-class">
+        <div className=" h-[350px] mt-2 overflow-x-scroll overflow-hidden scroll-smooth products-class">
           <div className="flex gap-5 ">
             {product.map((data) => {
               return (

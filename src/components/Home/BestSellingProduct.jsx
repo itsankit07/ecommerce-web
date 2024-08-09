@@ -51,7 +51,7 @@ const BestSellingProduct = ({ bestSelling }) => {
         )}
       </div>
 
-      <div className=" mt-10 h-[45.75em] mx-auto overflow-x-scroll overflow-hidden scroll-smooth products-class">
+      <div className=" mt-10 h-[45.75em] mx-auto">
         <div className="flex flex-wrap gap-5 ">
           {filteredProducts.slice(0, visibleCount).map((data) => {
             return data.rating.rate > 4 ? (
