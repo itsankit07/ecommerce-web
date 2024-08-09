@@ -67,17 +67,4 @@ const ExploreOurProducts = ({ explore }) => {
   );
 };
 
-// Higher Order Component
-
-// export const withNewLabel = (ExploreOurProducts) => {
-//   return (props) => {
-//     return (
-//       <div>
-//         <label className="absolute bg-green-500 text-white">New</label>
-//         <ExploreOurProducts {...props} />
-//       </div>
-//     );
-//   };
-// };
-
 export default ExploreOurProducts;
