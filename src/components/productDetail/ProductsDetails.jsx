@@ -19,7 +19,7 @@ const ProductsDetails = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-evenly mt-[181px] mb-[140px]">
+      <div className="flex flex-row justify-evenly mt-[181px]">
         <div className="flex flex-row justify-evenly gap-[30px]">
           <div className=" w-[170px] h-[600px] flex flex-col justify-evenly">
             <div className="w-[168px] h-[138px] bg-[#F5F5F5] "></div>
@@ -111,7 +111,7 @@ const ProductsDetails = () => {
         </div>
       </div>
 
-      {/* <RelatedItem /> */}
+      <RelatedItem detail={productDetail} />
     </>
   );
 };
