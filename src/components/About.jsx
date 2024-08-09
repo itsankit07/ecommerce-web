@@ -5,6 +5,9 @@ import {
   FaShippingFast,
   FaHeadset,
 } from "react-icons/fa";
+import { RiLinkedinLine } from "react-icons/ri";
+import { CiTwitter } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
 import { FaSackDollar } from "react-icons/fa6";
 import { GoShieldCheck } from "react-icons/go";
 import Carousel from "react-elastic-carousel";
@@ -21,8 +24,8 @@ const About = () => {
     <>
       {/* TOP PART */}
 
-      <div className="flex flex-row justify-between ml-[8.4375rem] mt-[8.9375rem] border-2 border-black">
-        <div className="w-[32.8125em] h-[21em] mt-[8.5625em] border-2 border-black">
+      <div className="flex flex-row justify-between ml-[8.4375rem] mt-[8.9375rem] ">
+        <div className="w-[32.8125em] h-[21em] mt-[8.5625em] ">
           <div className="flex flex-col justify-between">
             <div>
               <h1 className="text-5xl font-semibold">Our Story</h1>
@@ -43,7 +46,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-[44.0625em] h-[38.0625em] border-2 border-black">
+        <div className="w-[44.0625em] h-[38.0625em]">
           <img src="/AboutImage.png" alt="" />
         </div>
       </div>
@@ -51,46 +54,62 @@ const About = () => {
       {/* SECOND PART */}
 
       <div className="flex justify-evenly items-center  mb-8 mt-[140px] px-36">
-        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 hover:bg-red-500">
-          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
-            <FaStore className="text-3xl mb-1 text-white" />
+        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
+          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
+            <FaStore className="text-3xl mb-1 text-white group-hover:text-black" />
           </div>
-          <p className="text-2xl font-bold">10.5k</p>
-          <p>Sellers active our site</p>
+          <p className="font-inter text-2xl font-bold group-hover:text-white">
+            10.5k
+          </p>
+          <p className="group-hover:text-white font-poppin text-sm">
+            Sellers active our site
+          </p>
         </div>
-        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 hover:bg-red-500 ">
-          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
-            <FaDollarSign className="text-3xl mb-1 text-white" />
+        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500 ">
+          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
+            <FaDollarSign className="text-3xl mb-1 text-white group-hover:text-black" />
           </div>
-          <p className="text-2xl font-bold">33k</p>
-          <p>Monthly Product Sale</p>
+          <p className="font-inter text-2xl font-bold group-hover:text-white">
+            33k
+          </p>
+          <p className="group-hover:text-white font-poppin text-sm">
+            Monthly Product Sale
+          </p>
         </div>
-        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 hover:bg-red-500">
-          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
-            <FaShoppingBag className="text-3xl mb-1 text-white" />
+        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
+          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
+            <FaShoppingBag className="text-3xl mb-1 text-white group-hover:text-black" />
           </div>
-          <p className="text-2xl font-bold">45.5k</p>
-          <p>Customers active in our site</p>
+          <p className="font-inter text-2xl font-bold group-hover:text-white">
+            45.5k
+          </p>
+          <p className="group-hover:text-white text-sm font-poppin ">
+            Customers active in our site
+          </p>
         </div>
-        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 hover:bg-red-500">
-          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)]">
-            <FaSackDollar className="text-3xl mb-1 text-white" />
+        <div className="w-[270px] h-[230px] p-6 border rounded-lg flex flex-col items-center justify-center bg-white text-gray-800 group hover:bg-red-500">
+          <div className="mb-6 p-3 bg-black  rounded-full shadow-[0px_0px_0_8px_rgba(0,0,0,0.3)] group-hover:bg-white group-hover:shadow-gray-200">
+            <FaSackDollar className="text-3xl mb-1 text-white group-hover:text-black" />
           </div>
-          <p className="text-2xl font-bold">25k</p>
-          <p>Annual gross sale in our site</p>
+          <p className="font-inter text-2xl font-bold group-hover:text-white">
+            25k
+          </p>
+          <p className="group-hover:text-white font-poppintext-sm ">
+            Annual gross sale in our site
+          </p>
         </div>
       </div>
 
       {/* THIRD PART */}
 
-      <div className="max-w-7xl mt-[140px] mb-[196px] flex flex-row justify-between mx-[135px] border-2 border-black">
+      <div className="max-w-7xl mt-[140px] mb-[196px] flex flex-row justify-between mx-[135px] ">
         <Carousel breakPoints={breakPoints}>
           {AboutList.map((data) => {
             return (
               <>
-                <div className="flex flex-col w-[370px] h-[564px] border-2 border-black">
+                <div className="flex flex-col w-[370px] h-[564px] ">
                   <img
-                    className="px-10 pt-20 bg-gray-200 w-[370px] h-[430px] border-2 border-black"
+                    className="px-10 pt-20 bg-gray-200 w-[370px] h-[430px] object-contain "
                     src={data.url}
                     alt=""
                   />
@@ -99,6 +118,11 @@ const About = () => {
                   </div>
                   <div className="pt-1 font-poppin font-normal">
                     {data.designation}
+                  </div>
+                  <div className="flex flex-row pt-1 gap-3">
+                    <CiTwitter />
+                    <FaInstagram />
+                    <RiLinkedinLine />
                   </div>
                 </div>
               </>

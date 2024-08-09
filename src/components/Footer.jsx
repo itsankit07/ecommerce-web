@@ -1,3 +1,10 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div className="w-full bg-black h-[440px]">
@@ -48,8 +55,77 @@ const Footer = () => {
           <p className="font-extralight font-poppin">Contact</p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        {/* <div className="flex flex-col gap-6">
           <p className="font-poppin">Download App</p>
+        </div> */}
+        <div>
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Download App</h2>
+            <p className="mb-4 text-xs">Save $3 with App New User Only</p>
+          </div>
+
+          <div className="flex flex-row justify-evenly gap-2">
+            <div className="mb-4">
+              <img src="/Qrcode 1.png" alt="Qrcode" className="w-24 h-24" />
+            </div>
+
+            <div className="flex flex-col py-1 gap-2">
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/playstore.png" alt="Google Play" className="w-32" />
+              </a>
+              <a
+                href="https://www.apple.com/app-store/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/appstore.png" alt="App Store" className="w-32" />
+              </a>
+            </div>
+          </div>
+
+          <div className="flex justify-center mt-6 mr-9 gap-9">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF
+                className="text-white hover:text-gray-400"
+                size={24}
+              />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-white hover:text-gray-400" size={24} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram
+                className="text-white hover:text-gray-400"
+                size={24}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn
+                className="text-white hover:text-gray-400"
+                size={24}
+              />
+            </a>
+          </div>
         </div>
       </div>
       <div className="w-full bg-black text-gray-500 flex justify-center items-center py-3 border-gray-400 border-t-[0.5px]">

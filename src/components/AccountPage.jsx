@@ -1,7 +1,11 @@
+import AccountSidebar from "./AccountSidebar";
+
 const AccountPage = () => {
   return (
-    <div className="max-w-6xl mx-auto mb-[8.75rem] h-[39.375rem] mt-[11.3125rem] border-2 border-black flex flex-row justify-between">
-      <aside></aside>
+    <div className="max-w-6xl mx-auto mb-[8.75rem] h-[39.375rem] mt-[11.3125rem] flex flex-row justify-between">
+      <aside>
+        <AccountSidebar />
+      </aside>
       <div className="w-8/12 shadow-2xl">
         <div className="mx-[4em] mt-[2.5em]">
           <h1 className="tracking-wide font-poppin font-medium text-red-500">
